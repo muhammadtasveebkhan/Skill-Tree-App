@@ -14,9 +14,11 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 # 2. Define the file path
 DATA_PATH = os.path.join(DATA_DIR, "skills.csv")
 
-# Create the folder and file if they are missing so the app doesn't crash
-if not os.path.exists(os.path.dirname(DATA_PATH)):
-    os.makedirs(os.path.dirname(DATA_PATH))
+# 3. FIX: If the 'data' folder doesn't exist, CREATE IT
+if not os.path.exists(DATA_DIR):
+    os.makedirs(DATA_DIR)
+
+
 
 if not os.path.exists(DATA_PATH):
     # Create the CSV with headers
