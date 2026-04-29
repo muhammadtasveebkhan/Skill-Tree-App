@@ -50,4 +50,6 @@ if submit_button:
     st.success(f"Nice work! Added {user_hours} hours to {user_skill}.")
 
 # --- STEP 4: ANALYTICS & CHARTS ---
-                
+st.divider()
+st.header("Progress Analytics")
+
