@@ -11,6 +11,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # 1. Define the folder path
 DATA_DIR = os.path.join(BASE_DIR, "data")
 
+# 2. Define the file path
+DATA_PATH = os.path.join(DATA_DIR, "skills.csv")
+
 # Create the folder and file if they are missing so the app doesn't crash
 if not os.path.exists(os.path.dirname(DATA_PATH)):
     os.makedirs(os.path.dirname(DATA_PATH))
