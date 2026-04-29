@@ -33,4 +33,4 @@ with st.form("entry_form", clear_on_submit=True):
 
     with left:
         user_skill = st.selectbox("Select a Skill:", ["Python", "Data Science", "SQL", "Streamlit"])
-        
+        user_hours = st.number_input
