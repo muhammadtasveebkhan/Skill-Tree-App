@@ -47,4 +47,6 @@ if submit_button:
                             columns=['Date', 'Skill', 'Hours', 'Notes'])
     # 'mode=a' means append (add to the bottom)
     new_data.to_csv(DATA_PATH, mode='a', header=False, index=False)
+    st.success(f"Nice work! Added {user_hours} hours to {user_skill}.")
+    
                 
