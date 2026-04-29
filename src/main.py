@@ -27,4 +27,8 @@ st.write("Welcome! Use this tool to track your coding progress and build your re
 st.header("Log a New Session")
 
 # We use a form so the app doesn't refresh until we hit 'Save'
+with st.form("entry_form", clear_on_submit=True):
+    # Split the form into two side-by-side columns
+    left, right = st.columns(2)
 
+    
