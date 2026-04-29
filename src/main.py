@@ -61,5 +61,11 @@ if not df.empty:
     summary_df = df.groupby('Skill')['Hours'].sum().reset_index()
 
     # 2. Create the Radar Chart (Complexity Requirement)
-    
+    radar_chart = px.line_polar(
+        summary_df,
+        r='Hours',
+        theta='Skill', 
+        line_close=True,
+        markers=True
+    )
 
