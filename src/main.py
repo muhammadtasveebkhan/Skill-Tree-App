@@ -72,5 +72,7 @@ if not df.empty:
 
     # Show the chart
     st.plotly_chart(radar_chart)
+
+    # 3. Show the raw table below
     
 
