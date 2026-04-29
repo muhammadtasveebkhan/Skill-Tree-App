@@ -9,3 +9,5 @@ from datetime import datetime
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(BASE_DIR, "data", "skills.csv")
 
+# Create the folder and file if they are missing so the app doesn't crash
+
