@@ -16,4 +16,6 @@ if not os.path.exists(os.path.dirname(DATA_PATH)):
 if not os.path.exists(DATA_PATH):
     # Create the CSV with headers
     df_start = pd.DataFrame(columns=['Date', 'Skill', 'Hours', 'Notes'])
+    df_start.to_csv(DATA_PATH, index=False)
+    
          
