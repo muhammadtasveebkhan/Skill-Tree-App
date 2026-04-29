@@ -6,4 +6,5 @@ from datetime import datetime
 
 # --- STEP 1: SETUP FILE PATHS ---
 # This part makes sure the app finds the 'data' folder correctly
-BASE_DIR = os.path.dirname
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
