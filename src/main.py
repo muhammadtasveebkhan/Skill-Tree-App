@@ -45,4 +45,4 @@ with st.form("entry_form", clear_on_submit=True):
 if submit_button:
     new_data = pd.DataFrame([[user_date, user_skill, user_hours, user_notes]],
                             columns=['Date', 'Skill', 'Hours', 'Notes'])
-                
+    # 'mode=a' means             
