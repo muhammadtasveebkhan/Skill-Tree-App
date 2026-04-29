@@ -24,4 +24,6 @@ st.title("My Personal Skill-Tree")
 st.write("Welcome! Use this tool to track your coding progress and build your resume.")     
 
 # --- STEP 3: THE DATA ENTRY FORM ---
+st.header("Log a New Session")
+
 
