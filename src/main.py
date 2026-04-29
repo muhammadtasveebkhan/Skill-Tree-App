@@ -42,4 +42,7 @@ with st.form("entry_form", clear_on_submit=True):
     submit_button = st.form_submit_button("Save to My Skill-Tree")
 
 # If the button is clicked, add the data to our CSV
-            
+if submit_button:
+    new_data = pd.DataFrame([[user_date, user_skill, user_hours, user_notes]],
+                            columns=['Date', 'Skill', 'Hours', 'Notes'])
+                
