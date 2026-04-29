@@ -31,4 +31,6 @@ with st.form("entry_form", clear_on_submit=True):
     # Split the form into two side-by-side columns
     left, right = st.columns(2)
 
-    
+    with left:
+        user_skill = st.selectbox("Select a Skill:", ["Python", "Data Science", "SQL", "Streamlit"])
+        
