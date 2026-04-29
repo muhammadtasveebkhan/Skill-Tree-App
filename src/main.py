@@ -40,4 +40,6 @@ with st.form("entry_form", clear_on_submit=True):
         user_notes = st.text_input("What did you learn today?")
 
     submit_button = st.form_submit_button("Save to My Skill-Tree")
+
+# If the button is clicked, add the data to our CSV
             
