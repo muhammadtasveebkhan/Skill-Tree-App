@@ -38,4 +38,6 @@ with st.form("entry_form", clear_on_submit=True):
     with right:
         user_date = st.date_input("When did you do this?", datetime.now())
         user_notes = st.text_input("What did you learn today?")
+
+    submit_button = st.form_submit_button("Save to My Skill-Tree")
             
