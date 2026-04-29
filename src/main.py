@@ -19,4 +19,5 @@ if not os.path.exists(DATA_PATH):
     df_start.to_csv(DATA_PATH, index=False)
 
 # --- STEP 2: APP UI SETUP ---
+st.set_page_config(page_title="My Skill Tracker")
          
