@@ -26,4 +26,5 @@ st.write("Welcome! Use this tool to track your coding progress and build your re
 # --- STEP 3: THE DATA ENTRY FORM ---
 st.header("Log a New Session")
 
+# We use a form so the app doesn't refresh until we hit 'Save'
 
