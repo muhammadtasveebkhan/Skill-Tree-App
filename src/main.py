@@ -18,6 +18,9 @@ DATA_PATH = os.path.join(DATA_DIR, "skills.csv")
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
+# 4. If the CSV file is missing, create it with headers
+
+
 
 
 if not os.path.exists(DATA_PATH):
