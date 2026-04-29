@@ -1,89 +1,57 @@
 import streamlit as st
 import pandas as pd
-import os
 import plotly.express as px
 from datetime import datetime
+from pathlib import Path
 
-# --- STEP 1: SETUP FILE PATHS ---
-# This part makes sure the app finds the 'data' folder correctly
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# --- 1. BULLETPROOF PATH SETUP ---
+# This finds the exact folder where main.py is and forces the data folder to exist
+BASE_DIR = Path(__file__).parent
+DATA_DIR = BASE_DIR / "data"
+FILE_PATH = DATA_DIR / "skills.csv"
 
-# 1. Define the folder path
-DATA_DIR = os.path.join(BASE_DIR, "data")
+# Force Windows to create the folder safely
+DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-# 2. Define the file path
-DATA_PATH = os.path.join(DATA_DIR, "skills.csv")
+# Create the CSV if it's missing
+if not FILE_PATH.exists():
+    df_empty = pd.DataFrame(columns=['Date', 'Skill', 'Hours', 'Notes'])
+    df_empty.to_csv(FILE_PATH, index=False)
 
-# 3. FIX: If the 'data' folder doesn't exist, CREATE IT
-if not os.path.exists(DATA_DIR):
-    os.makedirs(DATA_DIR, exist_ok=True)
+# --- 2. UI LAYOUT ---
+st.set_page_config(page_title="Skill Tracker", layout="wide")
+st.title("🛡️ My Personal Skill-Tree")
 
-# 4. If the CSV file is missing, create it with headers
-
-if not os.path.exists(DATA_PATH):
-    df_start = pd.DataFrame(columns=['Date', 'Skill', 'Hours', 'Notes'])
-    df_start.to_csv(DATA_PATH, index=False)
-
-# --- STEP 2: APP UI SETUP ---
-st.set_page_config(page_title="My Skill Tracker")
-st.title("My Personal Skill-Tree") 
-st.write("Welcome! Use this tool to track your coding progress and build your resume.")     
-
-# --- STEP 3: THE DATA ENTRY FORM ---
+# --- 3. INPUT FORM ---
 st.header("Log a New Session")
-
-# We use a form so the app doesn't refresh until we hit 'Save'
 with st.form("entry_form", clear_on_submit=True):
-    # Split the form into two side-by-side columns
-    left, right = st.columns(2)
+    col1, col2 = st.columns(2)
+    with col1:
+        skill = st.selectbox("Skill", ["Python", "SQL", "Streamlit", "Business Analytics"])
+        hours = st.number_input("Hours", min_value=0.5, step=0.5)
+    with col2:
+        date = st.date_input("Date", datetime.now())
+        note = st.text_input("Notes")
+    
+    if st.form_submit_button("Save"):
+        new_row = pd.DataFrame([[date, skill, hours, note]], columns=['Date', 'Skill', 'Hours', 'Notes'])
+        new_row.to_csv(FILE_PATH, mode='a', header=False, index=False)
+        st.success("✅ Saved successfully!")
 
-    with left:
-        user_skill = st.selectbox("Select a Skill:", ["Python", "Data Science", "SQL", "Streamlit"])
-        user_hours = st.number_input("How many hours?", min_value=0.5, step=0.5)
-
-    with right:
-        user_date = st.date_input("When did you do this?", datetime.now())
-        user_notes = st.text_input("What did you learn today?")
-
-    submit_button = st.form_submit_button("Save to My Skill-Tree")
-
-# If the button is clicked, add the data to our CSV
-if submit_button:
-    new_data = pd.DataFrame([[user_date, user_skill, user_hours, user_notes]],
-                            columns=['Date', 'Skill', 'Hours', 'Notes'])
-    # 'mode=a' means append (add to the bottom)
-    new_data.to_csv(DATA_PATH, mode='a', header=False, index=False)
-    st.success(f"Nice work! Added {user_hours} hours to {user_skill}.")
-
-# --- STEP 4: ANALYTICS & CHARTS ---
+# --- 4. ANALYTICS ---
 st.divider()
-st.header("Progress Analytics")
-
-# Read the current data
-df = pd.read_csv(DATA_PATH)
+df = pd.read_csv(FILE_PATH)
 
 if not df.empty:
-    # 1. Group the data by Skill and sum the Hours
-    summary_df = df.groupby('Skill')['Hours'].sum().reset_index()
-
-    # 2. Create the Radar Chart (Complexity Requirement)
-    radar_chart = px.line_polar(
-        summary_df,
-        r='Hours',
-        theta='Skill', 
-        line_close=True,
-        markers=True
-    )
-    radar_chart.update_traces(fill='toself') # Fills in the center color
-
-    # Show the chart
-    st.plotly_chart(radar_chart)
-
-    # 3. Show the raw table below
-    st.subheader("Recent Activity")
+    chart_data = df.groupby('Skill')['Hours'].sum().reset_index()
+    fig = px.line_polar(chart_data, r='Hours', theta='Skill', line_close=True)
+    fig.update_traces(fill='toself')
+    st.plotly_chart(fig)
+    
+    st.subheader("Recent Entries")
     st.dataframe(df, use_container_width=True)
 else:
-    st.info("No data yet! Log your first session above to see the chart.")
+    st.info("Log your first skill above!")
 
 
 
