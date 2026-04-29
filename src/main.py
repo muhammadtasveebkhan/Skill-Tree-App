@@ -74,5 +74,6 @@ if not df.empty:
     st.plotly_chart(radar_chart)
 
     # 3. Show the raw table below
-    st.subheader
+    st.subheader("Recent Activity")
+    
 
