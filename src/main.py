@@ -75,5 +75,9 @@ if not df.empty:
 
     # 3. Show the raw table below
     st.subheader("Recent Activity")
+    st.dataframe(df, use_container_width=True)
+else:
+    st.info("No data yet! Log your first session above to see the chart.")
     
+
 
