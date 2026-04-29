@@ -46,4 +46,4 @@ if submit_button:
     new_data = pd.DataFrame([[user_date, user_skill, user_hours, user_notes]],
                             columns=['Date', 'Skill', 'Hours', 'Notes'])
     # 'mode=a' means append (add to the bottom)
-                
+    new_data.to_csv            
