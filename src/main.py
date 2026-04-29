@@ -37,4 +37,5 @@ with st.form("entry_form", clear_on_submit=True):
 
     with right:
         user_date = st.date_input("When did you do this?", datetime.now())
-        user_notes = st.text_input    
+        user_notes = st.text_input("What did you learn today?")
+            
