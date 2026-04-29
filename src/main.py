@@ -71,5 +71,6 @@ if not df.empty:
     radar_chart.update_traces(fill='toself') # Fills in the center color
 
     # Show the chart
-    st.plotly
+    st.plotly_chart(radar_chart)
+    
 
