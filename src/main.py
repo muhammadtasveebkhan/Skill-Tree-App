@@ -22,4 +22,5 @@ if not os.path.exists(DATA_PATH):
 st.set_page_config(page_title="My Skill Tracker")
 st.title("My Personal Skill-Tree") 
 st.write("Welcome! Use this tool to track your coding progress and build your resume.")     
-   
+
+
