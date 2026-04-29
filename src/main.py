@@ -53,3 +53,13 @@ if submit_button:
 st.divider()
 st.header("Progress Analytics")
 
+# Read the current data
+df = pd.read_csv(DATA_PATH)
+
+if not df.empty:
+    # 1. Group the data by Skill and sum the Hours
+    summary_df = df.groupby('Skill')['Hours'].sum().reset_index()
+
+    # 2. Create the Radar Chart (Complexity Requirement)
+    
+
