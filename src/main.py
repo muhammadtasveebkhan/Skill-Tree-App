@@ -20,11 +20,7 @@ if not os.path.exists(DATA_DIR):
 
 # 4. If the CSV file is missing, create it with headers
 
-
-
-
 if not os.path.exists(DATA_PATH):
-    # Create the CSV with headers
     df_start = pd.DataFrame(columns=['Date', 'Skill', 'Hours', 'Notes'])
     df_start.to_csv(DATA_PATH, index=False)
 
