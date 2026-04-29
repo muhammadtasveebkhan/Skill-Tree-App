@@ -68,4 +68,6 @@ if not df.empty:
         line_close=True,
         markers=True
     )
+    radar_chart.update_traces(fill='toself') # Fills in the center color
+    
 
