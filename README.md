@@ -31,6 +31,8 @@ To launch the app, execute the following command in your terminal:
    * 'data/': Contains 'skills.csv', the local database for all logged sessions.
    * 'pages/': 
     * '1_Data_Export.py': Allows users to download their raw data.
+    * '2_Resume_Builder.py': Auto-generates resume bullet points based on logged hours.
+* 'src/': **Development Environment** (Contains the working development drafts of the files above).
 
 
 
