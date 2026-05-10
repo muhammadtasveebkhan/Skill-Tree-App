@@ -18,6 +18,8 @@ To launch the app, execute the following command in your terminal:
 
 ## User Instructions (Help)
 1. **Log a Session:** On the main page, select a skill from the dropdown, enter the hours spent learning, add a brief note, and click "Save".
+2. **View Progress:** Scroll down to the "Skill Analytics" section to view your dynamically updated Radar Chart. The shape will stretch toward your most mastered skills.
+
 
 
 
