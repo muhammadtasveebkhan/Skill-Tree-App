@@ -29,6 +29,8 @@ To launch the app, execute the following command in your terminal:
 * 'dist/': **Production Environment (Graded Version)**
    * 'main.py': The main entry point for the app.
    * 'data/': Contains 'skills.csv', the local database for all logged sessions.
+   * 'pages/': 
+    * '1_Data_Export.py': Allows users to download their raw data.
 
 
 
