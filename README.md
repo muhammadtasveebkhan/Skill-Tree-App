@@ -12,6 +12,12 @@ To run this application locally, ensure you have Python installed, then install 
 To launch the app, execute the following command in your terminal:
 `streamlit run dist/main.py`
 
+*(Note: The 'dist/' folder contains the final production code. You can also run the development version using 'streamlit run src/main.py').*
+
+---
+
+## User Instructions (Help)
+
 
 
 
