@@ -6,6 +6,8 @@ This application is a professional development dashboard designed to help studen
 ---
 
 ## How to Run the App
-To run this application locally, ensure you have Python installed, 
+To run this application locally, ensure you have Python installed, then install the required libraries:
+'pip install streamlit pandas plotly'
+
 
 
