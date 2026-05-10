@@ -34,6 +34,10 @@ To launch the app, execute the following command in your terminal:
     * '2_Resume_Builder.py': Auto-generates resume bullet points based on logged hours.
 * 'src/': **Development Environment** (Contains the working development drafts of the files above).
 
+---
+
+## AI and Open-Source Usage Disclosure
+
 
 
 
