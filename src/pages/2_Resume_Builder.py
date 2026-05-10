@@ -47,5 +47,7 @@ try:
 
 except FileNotFoundError:
     st.error("Data file not found. Please log a skill on the main page first.")
+except Exception as e:
+    st.error(f"An error occurred: {e}")
 
 
