@@ -37,6 +37,8 @@ To launch the app, execute the following command in your terminal:
 ---
 
 ## AI and Open-Source Usage Disclosure
+* **AI Assistance:** AI was used as a learning tool to help troubleshoot Windows file pathing errors ('os.path.join') and to generate boilerplate structures for the multi-page layout. All logic was reviewed, manually implemented, and understood by the author.
+* **Open Source:** This project utilizes Streamlit for the frontend web framework, Pandas for data manipulation and calculations, and Plotly for interactive data visualization.
 
 
 
