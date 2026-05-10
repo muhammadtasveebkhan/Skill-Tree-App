@@ -9,3 +9,4 @@ FILE_PATH = os.path.join(BASE_DIR, "data", "skills.csv")
 
 # --- UI LAYOUT ---
 st.title("Auto-Resume Builder")
+st.write("Turn your hard work into professional bullet points for your portfolio or applications.")
