@@ -24,6 +24,7 @@ To launch the app, execute the following command in your terminal:
 ---
 
 ## File Structure
+* 'README.md': Project documentation and setup instructions.
 
 
 
