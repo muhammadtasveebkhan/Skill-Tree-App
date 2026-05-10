@@ -27,7 +27,8 @@ To launch the app, execute the following command in your terminal:
 * 'README.md': Project documentation and setup instructions.
 'demo.mp4': A brief video walkthrough demonstrating the app's functionality.
 * 'dist/': **Production Environment (Graded Version)**
-
+   * 'main.py': The main entry point for the app.
+   
 
 
 
