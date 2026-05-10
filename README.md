@@ -28,7 +28,7 @@ To launch the app, execute the following command in your terminal:
 'demo.mp4': A brief video walkthrough demonstrating the app's functionality.
 * 'dist/': **Production Environment (Graded Version)**
    * 'main.py': The main entry point for the app.
-   
+   * 'data/': Contains 'skills.csv', the local database for all logged sessions.
 
 
 
