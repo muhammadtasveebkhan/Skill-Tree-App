@@ -17,6 +17,8 @@ To launch the app, execute the following command in your terminal:
 ---
 
 ## User Instructions (Help)
+1. **Log a Session:** On the main page, select a skill from the dropdown, enter the hours spent learning, add a brief note, and click "Save".
+
 
 
 
