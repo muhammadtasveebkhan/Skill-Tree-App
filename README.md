@@ -6,6 +6,6 @@ This application is a professional development dashboard designed to help studen
 ---
 
 ## How to Run the App
-
+To run this application locally, ensure you have Python installed, 
 
 
