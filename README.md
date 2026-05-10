@@ -21,7 +21,9 @@ To launch the app, execute the following command in your terminal:
 2. **View Progress:** Scroll down to the "Skill Analytics" section to view your dynamically updated Radar Chart. The shape will stretch toward your most mastered skills.
 3. **Review History:** Your recent entries are displayed in the dataframe at the bottom of the page.
 
+---
 
+## File Structure
 
 
 
