@@ -31,9 +31,9 @@ To launch the app, execute the following command in your terminal:
     * '1_Data_Export.py': Allows users to download their raw data.
     * '2_Resume_Builder.py': Auto-generates resume bullet points based on logged hours. 
 * 'src/': **Development Environment** (Contains the working development drafts of the files above).
-* 'README.md': Project documentation and setup instructions.
-'requirements.txt' : Lists the Python libraries needed to deploy the app to the cloud.
 'demo.mp4': A brief video walkthrough demonstrating the app's functionality.   
+* 'README.md': Project documentation and setup instructions.
+'requirements.txt' : Lists the Python libraries needed to deploy the app to the cloud.  
 
 ---
 
